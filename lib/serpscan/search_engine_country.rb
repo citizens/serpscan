@@ -8,7 +8,6 @@ module Serpscan
     end
 
     def save(params = {})
-      #params.merge!(keyword: keyword)
       super(params)
     end
 
