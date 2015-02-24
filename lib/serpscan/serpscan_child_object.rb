@@ -14,11 +14,10 @@ module Serpscan
       end
 
       def create(params = {})
-        object = self.new(params)
+        object = new(params)
         params.merge!("#{object.parent.object_name}_id" => object.parent.id) if object.parent
         super
       end
     end
   end
 end
-

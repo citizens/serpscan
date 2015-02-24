@@ -2,11 +2,9 @@ require 'rest_client'
 
 module Serpscan
   class API
-      BASE_URL = 'https://serpscan.com/api/v1'
+    BASE_URL = 'https://serpscan.com/api/v1'
     class << self
-
       def get(path, options = {})
-
         url = api_url(path)
         if options[:params]
           url += "&#{querify(options[:params])}"
@@ -28,11 +26,11 @@ module Serpscan
       end
 
       private
-      
+
       def normalize_response(response)
         JSON.parse(response)
       end
- 
+
       def api_url(path)
         "#{BASE_URL}#{tokenize(path)}"
       end
@@ -43,7 +41,7 @@ module Serpscan
 
       def tokenize(path)
         param_separator = path.include?('?') ? '&' : '?'
-        path += "#{param_separator}token=#{Serpscan.api_key}"    
+        path += "#{param_separator}token=#{Serpscan.api_key}"
       end
     end
   end

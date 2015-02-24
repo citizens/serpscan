@@ -4,9 +4,7 @@ require 'webmock'
 require 'vcr'
 
 # Load shared examples
-Dir["./spec/support/**/*.rb"].sort.each { |f| require f }
-
-
+Dir['./spec/support/**/*.rb'].sort.each { |f| require f }
 
 VCR.configure do |c|
   c.cassette_library_dir = 'spec/fixtures/vcr_cassettes'
@@ -14,7 +12,6 @@ VCR.configure do |c|
   c.ignore_localhost = false
   c.configure_rspec_metadata!
 end
-
 
 RSpec.configure do |config|
   config.before(:all) do

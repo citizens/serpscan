@@ -1,11 +1,11 @@
 require 'spec_helper'
 
 describe Serpscan::Website, vcr: true do
-  it_should_behave_like "a creatable object", url: 'example-website.com'
-  it_should_behave_like "a listable object", Serpscan::Website
-  it_should_behave_like "a findable object", 1, Serpscan::Website::ATTRIBUTES
-  it_should_behave_like "a deletable object", 2
-  it_should_behave_like "a listable object", Serpscan::Website
+  it_should_behave_like 'a creatable object', url: 'example-website.com'
+  it_should_behave_like 'a listable object', Serpscan::Website
+  it_should_behave_like 'a findable object', 1, Serpscan::Website::ATTRIBUTES
+  it_should_behave_like 'a deletable object', 2
+  it_should_behave_like 'a listable object', Serpscan::Website
 
   describe 'keywords' do
     it 'should return a paginated array of keyword objects' do
