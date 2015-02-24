@@ -1,0 +1,51 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:5055/api/v1/websites?token=123&website%5Burl%5D=example-website.com
+    body:
+      encoding: UTF-8
+      string: '{"website":{"url":"example-website.com"}}'
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Length:
+      - '41'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 201
+      message: 'Created '
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - '"cb0620dfa50f8c4e40e50bb022cb58fd"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 4971dad8b521774ac6255c26663344eb
+      X-Runtime:
+      - '0.177275'
+      Server:
+      - WEBrick/1.3.1 (Ruby/1.9.3/2013-01-15)
+      Date:
+      - Sun, 22 Feb 2015 20:41:42 GMT
+      Content-Length:
+      - '36'
+      Connection:
+      - Keep-Alive
+      Set-Cookie:
+      - _serps_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRkkiJTA0NjE1MTE3YzYwYjIzNmNhZmUxNjE5Yzc3YzgwNjVkBjsAVA%3D%3D--be6f4e2644285c9687c1027e0728731407c21855;
+        path=/; HttpOnly
+    body:
+      encoding: UTF-8
+      string: '{"id":2,"url":"example-website.com"}'
+    http_version: 
+  recorded_at: Sun, 22 Feb 2015 20:41:42 GMT
+recorded_with: VCR 2.9.3

@@ -1,0 +1,96 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:5055/api/v1/websites/1?token=123
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - '"c959b5255215b9b0a60282ec6a65f51d"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 4c717fc2c65ebcddc46f8c3131f446ff
+      X-Runtime:
+      - '0.022719'
+      Server:
+      - WEBrick/1.3.1 (Ruby/1.9.3/2013-01-15)
+      Date:
+      - Sun, 22 Feb 2015 21:26:07 GMT
+      Content-Length:
+      - '28'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: '{"id":1,"url":"example.com"}'
+    http_version: 
+  recorded_at: Sun, 22 Feb 2015 21:26:07 GMT
+- request:
+    method: post
+    uri: http://localhost:5055/api/v1/keywords?keyword%5Bphrase%5D=new%20keyword&keyword%5Bwebsite_id%5D=1&token=123
+    body:
+      encoding: UTF-8
+      string: '{"keyword":{"phrase":"new keyword","website_id":1}}'
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Length:
+      - '51'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 201
+      message: 'Created '
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Etag:
+      - '"bdf4ef2089d02e9a52a59ccfa7b3499e"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - aec48d9577adfcc69cd7a907303f2b28
+      X-Runtime:
+      - '0.064045'
+      Server:
+      - WEBrick/1.3.1 (Ruby/1.9.3/2013-01-15)
+      Date:
+      - Sun, 22 Feb 2015 21:26:07 GMT
+      Content-Length:
+      - '420'
+      Connection:
+      - Keep-Alive
+      Set-Cookie:
+      - _serps_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRkkiJTUzYzMwMTI5ZTc5ZTNhMGJjNjE0ZjQxMTFmOGUwYmQyBjsAVA%3D%3D--0fdb66a13fc7cc2c5d19fef5add5ce13692479a7;
+        path=/; HttpOnly
+    body:
+      encoding: UTF-8
+      string: '{"website_id":null,"page":null,"total_pages":null,"results":[{"id":9,"phrase":"new
+        keyword","current_rank":null,"initial_rank":null,"day_change":null,"week_change":null,"alltime_change":"_","search_volume":null,"search_engine_country_id":1}],"id":9,"phrase":"new
+        keyword","current_rank":null,"initial_rank":null,"day_change":null,"week_change":null,"alltime_change":"_","search_volume":null,"search_engine_country_id":1}'
+    http_version: 
+  recorded_at: Sun, 22 Feb 2015 21:26:07 GMT
+recorded_with: VCR 2.9.3
