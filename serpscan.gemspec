@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ['mail@citizensinspace.com']
   spec.summary       = 'API client for SERP Scan rank tracker'
   spec.description   = spec.summary
-  spec.homepage      = ''
+  spec.homepage      = 'https://serpscan.com'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files -z`.split("\x0")
