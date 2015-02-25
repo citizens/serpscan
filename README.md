@@ -22,7 +22,7 @@ $ gem install serpscan
 
 ## Usage
 
-Set your API key. If you're using Rails you may want to place the code below in a file at config/initializer/serpscan.rb.
+Set your API key. If you're using Rails you may want to place the code below in a file at config/initializers/serpscan.rb.
 
 ```ruby
 Serpscan.api_key = 'YOUR API KEY'
