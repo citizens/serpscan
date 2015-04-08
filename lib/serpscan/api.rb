@@ -1,8 +1,9 @@
 require 'rest_client'
+require 'json'
 
 module Serpscan
   class API
-    BASE_URL = 'https://serpscan.com/api/v1'
+    BASE_URL = 'https://serpscan.com/api/v2'
     class << self
       def get(path, options = {})
         url = api_url(path)

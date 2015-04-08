@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:5055/api/v1/websites?token=123
+    uri: http://localhost:5055/api/v2/keywords/1?token=123
     body:
       encoding: US-ASCII
       string: ''
@@ -23,24 +23,24 @@ http_interactions:
       X-Ua-Compatible:
       - IE=Edge
       Etag:
-      - '"f47a9a60d97ae9f3dc6a20f76eeaeaba"'
+      - '"55bbf33bfa501ca7c51423cdd6691e40"'
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 940c2aee83734f12d859be2f94b7b5d3
+      - b817dbea13a65328c0d4beca8a4ea006
       X-Runtime:
-      - '0.030534'
+      - '0.025464'
       Server:
       - WEBrick/1.3.1 (Ruby/1.9.3/2013-01-15)
       Date:
-      - Sun, 22 Feb 2015 20:41:42 GMT
+      - Tue, 07 Apr 2015 16:20:06 GMT
       Content-Length:
-      - '79'
+      - '223'
       Connection:
       - Keep-Alive
     body:
       encoding: UTF-8
-      string: '{"results":[{"id":2,"url":"example-website.com"},{"id":1,"url":"example.com"}]}'
+      string: '{"id":1,"phrase":"example keyword 0","current_rank":1,"initial_rank":100,"day_change":"+99","week_change":"+99","month_change":"+55","alltime_change":"+99","search_volume":"1000","search_engine_country_id":1,"website_id":1}'
     http_version: 
-  recorded_at: Sun, 22 Feb 2015 20:41:42 GMT
+  recorded_at: Tue, 07 Apr 2015 16:20:06 GMT
 recorded_with: VCR 2.9.3

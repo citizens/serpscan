@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:5055/api/v1/search_engines?token=123
+    uri: http://localhost:5055/api/v2/keywords/1?token=123
     body:
       encoding: US-ASCII
       string: ''
@@ -23,24 +23,24 @@ http_interactions:
       X-Ua-Compatible:
       - IE=Edge
       Etag:
-      - '"32c92eaf9e1ae3568c10f3ce8bae4a16"'
+      - '"55bbf33bfa501ca7c51423cdd6691e40"'
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 6084349191dfd9b13ac3b318c59b95cd
+      - 95a50e8b6962adeedc1ffb4219fc22fc
       X-Runtime:
-      - '0.061687'
+      - '0.026852'
       Server:
       - WEBrick/1.3.1 (Ruby/1.9.3/2013-01-15)
       Date:
-      - Sun, 22 Feb 2015 20:41:42 GMT
+      - Tue, 07 Apr 2015 16:20:06 GMT
       Content-Length:
-      - '100'
+      - '223'
       Connection:
       - Keep-Alive
     body:
       encoding: UTF-8
-      string: '{"results":[{"id":1,"title":"Google","countries":[{"id":1,"location":"USA","search_engine_id":1}]}]}'
+      string: '{"id":1,"phrase":"example keyword 0","current_rank":1,"initial_rank":100,"day_change":"+99","week_change":"+99","month_change":"+55","alltime_change":"+99","search_volume":"1000","search_engine_country_id":1,"website_id":1}'
     http_version: 
-  recorded_at: Sun, 22 Feb 2015 20:41:42 GMT
+  recorded_at: Tue, 07 Apr 2015 16:20:06 GMT
 recorded_with: VCR 2.9.3

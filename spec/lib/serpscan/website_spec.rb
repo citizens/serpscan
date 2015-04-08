@@ -9,7 +9,7 @@ describe Serpscan::Website, vcr: true do
 
   describe 'keywords' do
     it 'should return a paginated array of keyword objects' do
-      website = subject.class.find(3)
+      website = subject.class.find(1)
       keywords = website.keywords
       expect(keywords.class).to eq Array
       expect(keywords.first.class).to eq Serpscan::Keyword

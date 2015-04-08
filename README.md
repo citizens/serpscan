@@ -58,7 +58,7 @@ To create a keyword:
 
 ```ruby
 website = Serpscan::Website.find(1)
-website.create_keyword(phrase: 'example keyword')
+website.create_keyword('example keyword')
 ```
 
 ## Attributes
@@ -78,5 +78,5 @@ Websites:
 Keywords:
 
 ```ruby
-[:id, :phrase, :current_rank, :initial_rank, :day_change, :week_change, :alltime_change, :search_volume, :search_engine_country_id]
+[:id, :phrase, :current_rank, :initial_rank, :day_change, :week_change, :month_change, :alltime_change, :search_volume, :search_engine_country_id, :website_id]
 ```

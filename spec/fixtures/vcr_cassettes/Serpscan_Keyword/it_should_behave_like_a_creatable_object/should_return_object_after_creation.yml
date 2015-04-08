@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: http://localhost:5055/api/v1/keywords?keyword%5Bkeyword%5D=example%20keyword&keyword%5Bsearch_engine_country_id%5D=1&keyword%5Bwebsite_id%5D=1&token=123
+    uri: http://localhost:5055/api/v2/keywords?keyword%5Bkeyword%5D=example%20keyword&keyword%5Bsearch_engine_country_id%5D=1&keyword%5Bwebsite_id%5D=1&token=123
     body:
       encoding: UTF-8
       string: '{"keyword":{"keyword":"example keyword","website_id":1,"search_engine_country_id":1}}'
@@ -25,28 +25,29 @@ http_interactions:
       X-Ua-Compatible:
       - IE=Edge
       Etag:
-      - '"b468971b71df0e30c02b082c707379cf"'
+      - '"bf4c0cfa882d4cebe5595d83fbfbd1eb"'
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 7024f78e2d3309f8fd844a19208d4da7
+      - bb0308db399a6fa6ff91ed3681b19251
       X-Runtime:
-      - '0.069711'
+      - '0.065284'
       Server:
       - WEBrick/1.3.1 (Ruby/1.9.3/2013-01-15)
       Date:
-      - Sun, 22 Feb 2015 20:43:19 GMT
+      - Tue, 07 Apr 2015 16:20:05 GMT
       Content-Length:
-      - '246'
+      - '480'
       Connection:
       - Keep-Alive
       Set-Cookie:
-      - _serps_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRkkiJTgxOTYyYTcxZGNkNzk1NjQ3MGFmZGUwNzQ0MTNjYThjBjsAVA%3D%3D--08f481b92b725e3339e9a3d8177e6c10e57ab1a2;
+      - _serps_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRkkiJTg2NjdjNDUzNmQwMDNjYTYxMjRmODcyNDQ5OWU0NzE5BjsAVA%3D%3D--daf1c1f64849e1f45bfc2dd75794a9ed2d12c0f0;
         path=/; HttpOnly
     body:
       encoding: UTF-8
-      string: '{"website_id":null,"page":null,"total_pages":null,"results":[{"id":3,"phrase":"example
-        keyword","current_rank":null,"initial_rank":null,"day_change":null,"week_change":null,"alltime_change":"_","search_volume":null,"search_engine_country_id":1}]}'
+      string: '{"website_id":1,"page":null,"total_pages":null,"results":[{"id":3,"phrase":"example
+        keyword","current_rank":null,"initial_rank":null,"day_change":null,"week_change":null,"month_change":null,"alltime_change":"_","search_volume":null,"search_engine_country_id":1,"website_id":1}],"id":3,"phrase":"example
+        keyword","current_rank":null,"initial_rank":null,"day_change":null,"week_change":null,"month_change":null,"alltime_change":"_","search_volume":null,"search_engine_country_id":1}'
     http_version: 
-  recorded_at: Sun, 22 Feb 2015 20:43:19 GMT
+  recorded_at: Tue, 07 Apr 2015 16:20:05 GMT
 recorded_with: VCR 2.9.3
