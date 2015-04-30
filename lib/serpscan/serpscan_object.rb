@@ -1,6 +1,7 @@
 module Serpscan
   class SerpscanObject
     def initialize(options = {})
+      @raw_json ||= options
       assign_attributes(options)
     end
 
@@ -15,6 +16,10 @@ module Serpscan
     def delete
       Serpscan::API.delete("#{api_path}/#{id}")
       true
+    end
+
+    def to_json
+      @raw_json.to_json
     end
 
     class << self

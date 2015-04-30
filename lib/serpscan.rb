@@ -8,6 +8,7 @@ require 'serpscan/search_engine'
 require 'serpscan/website'
 require 'serpscan/errors'
 require 'queryparams'
+require 'json'
 
 module Serpscan
   class << self

@@ -23,6 +23,7 @@ describe Serpscan::Website, vcr: true do
     it 'should return a keyword object' do
       website = subject.class.find(1)
       keyword = website.create_keyword(phrase)
+
       expect(keyword.class).to eq Serpscan::Keyword
       expect(keyword.website).to eq website
       expect(keyword.phrase).to eq phrase

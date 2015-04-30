@@ -3,7 +3,9 @@ module Serpscan
     attr_accessor :parent
 
     def initialize(options = {})
-      @parent = options[:parent]
+      dup_options = options.dup
+      @parent = dup_options.delete(:parent)
+      @raw_json = dup_options
       super
     end
 
