@@ -1,6 +1,6 @@
 module Serpscan
   class SearchEngineCountry < SerpscanChildObject
-    ATTRIBUTES = [:id, :location, :search_engine_id]
+    ATTRIBUTES = [:id, :location, :search_engine_id, :default]
     attr_accessor *ATTRIBUTES
 
     def search_engine
