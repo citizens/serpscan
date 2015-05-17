@@ -13,6 +13,12 @@ require 'json'
 
 module Serpscan
   class << self
-    attr_accessor :api_key
+    def api_key
+      @api_key || ENV['SERPSCAN_API_KEY']
+    end
+
+    def api_key=(key)
+      @api_key = key
+    end
   end
 end
