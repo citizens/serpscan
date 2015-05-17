@@ -28,6 +28,12 @@ Set your API key. If you're using Rails you may want to place the code below in 
 Serpscan.api_key = 'YOUR API KEY'
 ```
 
+Alternatively you can set your API key as an environment variable:
+
+```ruby
+ENV['SERPSCAN_API_KEY'] = 'YOUR API KEY'
+```
+
 To create a website:
 
 ```ruby
