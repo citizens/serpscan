@@ -7,5 +7,9 @@ module Serpscan
     def website
       parent
     end
+
+    def history
+      @history ||= Serpscan::API.get("#{api_path}/#{id}/history")['rankings']
+    end
   end
 end

@@ -33,7 +33,7 @@ Alternatively you can set your API key as an environment variable:
 ```ruby
 ENV['SERPSCAN_API_KEY'] = 'YOUR API KEY'
 ```
-
+### Websites
 To create a website:
 
 ```ruby
@@ -60,6 +60,7 @@ website = Serpscan::Website.find(1)
 website.keywords
 ```
 
+### Keywords
 To create a keyword:
 
 ```ruby
@@ -67,6 +68,15 @@ website = Serpscan::Website.find(1)
 website.create_keyword('example keyword')
 ```
 
+To get a particular keyword:
+```ruby
+Serpscan::Keyword.find(id)
+```
+
+Ranking history:
+```ruby
+Serpscan::Keyword.find(id).history #> [['2015-01-01', 2], ['2015-01-02', 1]]
+```
 ## Attributes
 
 Each of these attributes can be called directly on the object. Example:
